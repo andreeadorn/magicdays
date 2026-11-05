@@ -1,17 +1,16 @@
 /* Variabler */
 html {
-  --color-page: #f7f7f7;
-  --color-surface: #fff;
-  --color-text: #222;
-  --color-muted: #666;
-  --color-border: #d8d8d8;
+  --color-page: #3e314a;
+  --color-surface: #e0e0e0;
+  --color-text: white;
+  --color-surface-text: black;
+  --color-border: #27563b;
   --space-05: 0.5rem;
   --space-1: 1rem;
   --space-2: 2rem;
   --space-3: 3rem;
 
   background: var(--color-page);
-  color: var(--color-text);
 }
 
 /* Globalt layout */
@@ -21,13 +20,6 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(1rlh, 1fr) minmax(0, 75rem) minmax(1rlh, 1fr);
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
 }
 
 main {
@@ -154,12 +146,6 @@ main > * {
 }
 
 /* Navigation */
-[popover] {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-}
 
 .site-nav button {
   padding: 0.4rem 0.7rem;
@@ -247,7 +233,90 @@ main > * {
   display: inline-block;
   padding: 0.5rem 0.8rem;
   border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  color: inherit;
+  background: var(--color-border);
+  color: var(--color-text);
   text-decoration: none;
+}
+
+/*forside*/
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-block:var(--space-2);
+}
+.intro img{
+  max-width: 35vw;
+  max-height: auto;
+  object-fit: cover;
+  justify-self: end;
+  border-radius: 10px;
+}
+
+/*Popover section*/
+.flex {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  padding: var(--space-1);
+  border-radius: 5%;
+  gap: var(--space-1);
+}
+
+.events button {
+  margin-top: auto;
+  border-radius: var(--space-05);
+}
+
+.events img {
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 5%;
+}
+.events .crystals h2 p {
+  color: var(--color-surface-text);
+}
+/*popovers*/
+[popover] {
+  grid-column: 2;
+  box-sizing: border-box;
+  width: 50ch;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  padding: var(--space-1);
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background: white;
+  color: #222;
+  transition: 0.5s;
+  transition-behavior: allow-discrete;
+  opacity: 0;
+}
+[popover] img {
+  max-width: auto;
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+[popover] button {
+  margin-top: auto;
+  border-radius: var(--space-05);
+}
+[popover]:popover-open {
+  display: grid;
+  gap: var(--space-1);
+  opacity: 1;
+}
+[popover]::backdrop {
+  background: rgb(0 0 0 / 0.15);
+}
+@starting-style {
+  :popover-open {
+    opacity: 0;
+  }
 }
