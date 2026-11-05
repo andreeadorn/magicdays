@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Magic Days</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">magic Days</a>
       <nav class="site-nav">
         <button>Menu</button>
         <ul class="menu" id="menu" popover>
@@ -24,7 +24,88 @@
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section class="hero">
+
+    </section>
+    <section class="intro">
+      <div>
+      <h2>Et samlingssted for nysgerrige sjæle</h2>
+      <p>Træd ind i et univers fyldt med inspiration, traditioner og nye perspektiver. Magic Days samler mennesker med
+      interesse for naturens mystik, spiritualitet og gamle håndværk.</p>
+      
+      <p>Uanset om du allerede kender til den spirituelle verden eller blot er nysgerrig på at udforske noget nyt, er der plads
+      til dig. Kom som du er, mød ligesindede, og vær med til en dag fyldt med nærvær, inspiration og fællesskab.</p></div>
+      <img src="./imgs/intro.webp" alt="billede af event">
+    </section>
+    <div class="flex">
+      <section class="events tarot">
+        <img src="./imgs/tarot-card.webp" alt="tarot kort">
+        <div>
+          <h2>Tarot readings</h2>
+          <p>Er du nysgerrig på, hvad kortene kan fortælle? Træd ind i tarotkortenes verden, og oplev en anderledes måde
+            at udforske
+            dine tanker og muligheder på.</p>
+        </div>
+        <button class="button" popovertarget="tarot-pop">Læs mere</button>
+      </section>
+      <section class="events potions">
+        <img src="./imgs/potions-card.webp" alt="">
+        <h2>Potions Workshop</h2>
+        <p>Dyk ned i naturens gamle traditioner, og bliv inspireret af urter, planter og naturlige ingredienser. Måske
+          finder du
+          inspiration til din egen lille urtehylde?</p>
+        <button class="button" popovertarget="potions-pop">Læs mere</button>
+      </section>
+      <section class="events crystals">
+        <img src="./imgs/crystals-card.webp" alt="">
+        <h2>Crystals shop</h2>
+        <p>Fra glitrende ametyst til smuk rosenkvarts – sten og krystaller har fascineret mennesker i århundreder. Kom
+          og udforsk
+          deres historier, symbolik og betydning.</p>
+        <button class="button" popovertarget="crystal-pop">Læs mere</button>
+      </section>
+    </div>
+    <section>
+      <div id="tarot-pop" popover>
+        <img src="./imgs/tarot-pop.webp" alt="">
+        <h2>tarot</h2>
+        <p>Få en personlig tarotlæsning, hvor kortenes symboler og betydninger danner udgangspunkt for en samtale om
+          dig, dine
+          tanker og de spørgsmål, du måske går rundt med.
+
+          Uanset om du er ny til tarot eller allerede kender kortene, er du velkommen til at være med. Kom med et åbent
+          sind, og
+          lad kortene inspirere dig til nye perspektiver.
+        </p>
+        <button popovertarget="tarot-pop">
+          Luk
+        </button>
+      </div>
+      <div id="crystal-pop" popover>
+        <img src="imgs/crystals-pop.webp" alt="">
+        <h2>Krystallernes univers</h2>
+        <p>Hvad er det egentlig, der gør krystaller så fascinerende? Kom med på en introduktion til forskellige sten og
+          krystaller,
+          deres oprindelse, historie og betydning i spirituelle traditioner.
+        </p>
+        <button popovertarget="crystals-pop">
+          Luk
+        </button>
+      </div>
+      <div id="potions-pop" popover>
+        <img src="./imgs/potions-pop.webp" alt="">
+        <h2>Naturens lille apotek</h2>
+        <p>
+        Lær om forskellige urter og deres traditionelle anvendelser i naturmedicin. Vi udforsker blandt andet planter, blomster
+        og naturlige ingredienser, som gennem generationer har været brugt i hjemmelavede remedier.</p>
+        <button popovertarget="potions-pop">
+          Luk
+        </button>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
